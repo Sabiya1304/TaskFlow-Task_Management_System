@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Tasks - TaskFlow</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- ==================== NAVBAR ==================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            TaskFlow
+        </div>
+
+
+        <nav class="main-nav">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="tasks.html" class="active">
+                My Tasks
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <button id="logoutBtn">
+                Logout
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ==================== MAIN ==================== -->
+
+    <main class="tasks-container">
+
+
+        <!-- ==================== PAGE HEADER ==================== -->
+
+        <section class="tasks-header">
+
+            <div>
+
+                <h1>
+                    My Tasks
+                </h1>
+
+                <p>
+                    Manage and organize your tasks.
+                </p>
+
+            </div>
+
+
+            <button
+                id="addTaskBtn"
+                class="primary-btn"
+            >
+                + Add Task
+            </button>
+
+        </section>
+
+
+        <!-- ==================== SEARCH ==================== -->
+
+        <section class="task-controls">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search tasks..."
+            >
+
+
+            <!-- Status -->
+
+            <select id="statusFilter">
+
+                <option value="">
+                    All Status
+                </option>
+
+                <option value="Not Started">
+                    Not Started
+                </option>
+
+                <option value="In Progress">
+                    In Progress
+                </option>
+
+                <option value="Waiting">
+                    Waiting
+                </option>
+
+                <option value="Blocked">
+                    Blocked
+                </option>
+
+                <option value="Completed">
+                    Completed
+                </option>
+
+            </select>
+
+
+            <!-- Priority -->
+
+            <select id="priorityFilter">
+
+                <option value="">
+                    All Priority
+                </option>
+
+                <option value="High">
+                    High
+                </option>
+
+                <option value="Medium">
+                    Medium
+                </option>
+
+                <option value="Low">
+                    Low
+                </option>
+
+            </select>
+
+
+            <!-- Health -->
+
+            <select id="healthFilter">
+
+                <option value="">
+                    All Health
+                </option>
+
+                <option value="ON_TRACK">
+                    On Track
+                </option>
+
+                <option value="NEEDS_ATTENTION">
+                    Needs Attention
+                </option>
+
+                <option value="AT_RISK">
+                    At Risk
+                </option>
+
+            </select>
+
+
+            <!-- Sort -->
+
+            <select id="sortFilter">
+
+                <option value="">
+                    Sort By
+                </option>
+
+                <option value="dueDate">
+                    Due Date
+                </option>
+
+                <option value="newest">
+                    Newest
+                </option>
+
+                <option value="oldest">
+                    Oldest
+                </option>
+
+                <option value="priority">
+                    Priority
+                </option>
+
+            </select>
+
+        </section>
+
+
+        <!-- ==================== STATUS TABS ==================== -->
+
+        <section class="status-tabs">
+
+            <button
+                class="status-tab active"
+                data-status=""
+            >
+                All
+            </button>
+
+            <button
+                class="status-tab"
+                data-status="Not Started"
+            >
+                Not Started
+            </button>
+
+            <button
+                class="status-tab"
+                data-status="In Progress"
+            >
+                In Progress
+            </button>
+
+            <button
+                class="status-tab"
+                data-status="Waiting"
+            >
+                Waiting
+            </button>
+
+            <button
+                class="status-tab"
+                data-status="Blocked"
+            >
+                Blocked
+            </button>
+
+            <button
+                class="status-tab"
+                data-status="Completed"
+            >
+                Completed
+            </button>
+
+        </section>
+
+
+        <!-- ==================== TASK LIST ==================== -->
+
+        <section>
+
+            <div
+                id="taskList"
+                class="task-list"
+            >
+
+                <p class="empty-message">
+                    Loading tasks...
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================== ADD TASK MODAL ==================== -->
+
+    <div
+        id="taskModal"
+        class="modal"
+    >
+
+        <div class="modal-content task-modal-content">
+
+            <button
+                class="close-btn"
+                id="closeTaskModal"
+            >
+                &times;
+            </button>
+
+
+            <h2 id="taskModalTitle">
+                Add Task
+            </h2>
+
+
+            <form id="taskForm">
+
+
+                <!-- Title -->
+
+                <div class="form-group">
+
+                    <label for="taskTitle">
+                        Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="taskTitle"
+                        placeholder="Enter task title"
+                        maxlength="100"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Description -->
+
+                <div class="form-group">
+
+                    <label for="taskDescription">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="taskDescription"
+                        placeholder="Enter task description"
+                        maxlength="1000"
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Due Date -->
+
+                <div class="form-group">
+
+                    <label for="taskDueDate">
+                        Due Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="taskDueDate"
+                    >
+
+                </div>
+
+
+                <!-- Priority -->
+
+                <div class="form-group">
+
+                    <label for="taskPriority">
+                        Priority
+                    </label>
+
+                    <select id="taskPriority">
+
+                        <option value="Medium">
+                            Medium
+                        </option>
+
+                        <option value="High">
+                            High
+                        </option>
+
+                        <option value="Low">
+                            Low
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Status -->
+
+                <div class="form-group">
+
+                    <label for="taskStatus">
+                        Status
+                    </label>
+
+                    <select id="taskStatus">
+
+                        <option value="Not Started">
+                            Not Started
+                        </option>
+
+                        <option value="In Progress">
+                            In Progress
+                        </option>
+
+                        <option value="Waiting">
+                            Waiting
+                        </option>
+
+                        <option value="Blocked">
+                            Blocked
+                        </option>
+
+                        <option value="Completed">
+                            Completed
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Subtask -->
+
+                <div class="form-group">
+
+                    <label>
+                        Subtasks
+                    </label>
+
+                    <div id="subtaskInputs">
+
+                        <div class="subtask-input-row">
+
+                            <input
+                                type="text"
+                                class="subtask-input"
+                                placeholder="Enter subtask"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="addSubtaskInput"
+                        class="secondary-btn"
+                    >
+                        + Add Subtask
+                    </button>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn full-width"
+                >
+                    Save Task
+                </button>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="../js/api.js"></script>
+    <script src="../js/tasks.js"></script>
+
+</body>
+
+</html>

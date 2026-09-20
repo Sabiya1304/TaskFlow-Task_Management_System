@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>TaskFlow - Task Management System</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+<body>
+
+
+<!-- ==================== NAVBAR ==================== -->
+
+<header class="navbar">
+
+    <div class="logo">
+        TaskFlow
+    </div>
+
+    <div class="nav-buttons">
+
+        <button id="loginBtn">
+            Login
+        </button>
+
+        <button id="registerBtn">
+            Register
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- ==================== HERO ==================== -->
+
+<main>
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <span class="hero-label">
+                SIMPLE TASK MANAGEMENT
+            </span>
+
+            <h1>
+                Manage Your Tasks.<br>
+                Stay on Track.
+            </h1>
+
+            <p>
+                Create, organize and complete your tasks.
+                When something becomes difficult, delayed
+                or blocked, TaskFlow helps you decide
+                what to do next.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button
+                    id="getStartedBtn"
+                    class="hero-primary-btn"
+                >
+                    Get Started
+                </button>
+
+                <a
+                    href="#features"
+                    class="hero-secondary-btn"
+                >
+                    Explore Features
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==================== HERO TASK PREVIEW ==================== -->
+
+        <div class="hero-preview">
+
+            <div class="preview-header">
+
+                <span>
+                    Today's Tasks
+                </span>
+
+                <span class="preview-count">
+                    3 tasks
+                </span>
+
+            </div>
+
+
+            <div class="preview-task">
+
+                <div>
+
+                    <strong>
+                        Complete Java Project
+                    </strong>
+
+                    <small>
+                        Due today
+                    </small>
+
+                </div>
+
+                <span class="preview-status attention">
+                    Needs Attention
+                </span>
+
+            </div>
+
+
+            <div class="preview-task">
+
+                <div>
+
+                    <strong>
+                        Prepare Presentation
+                    </strong>
+
+                    <small>
+                        In Progress
+                    </small>
+
+                </div>
+
+                <span class="preview-status track">
+                    On Track
+                </span>
+
+            </div>
+
+
+            <div class="preview-task">
+
+                <div>
+
+                    <strong>
+                        Submit Assignment
+                    </strong>
+
+                    <small>
+                        Due tomorrow
+                    </small>
+
+                </div>
+
+                <span class="preview-status risk">
+                    At Risk
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================== INTRO ==================== -->
+
+    <section class="landing-intro">
+
+        <span class="section-label">
+            WHY TASKFLOW?
+        </span>
+
+        <h2>
+            More than a simple To-Do List.
+        </h2>
+
+        <p>
+            Most task apps help you store and organize
+            tasks. TaskFlow also focuses on what happens
+            when you cannot complete a task as planned.
+        </p>
+
+    </section>
+
+
+
+    <!-- ==================== PROBLEM / SOLUTION ==================== -->
+
+    <section class="problem-section">
+
+        <div class="problem-card">
+
+            <span class="problem-number">
+                01
+            </span>
+
+            <h3>
+                Task gets delayed
+            </h3>
+
+            <p>
+                A deadline is getting closer,
+                but the task is still incomplete.
+            </p>
+
+        </div>
+
+
+        <div class="problem-arrow">
+            →
+        </div>
+
+
+        <div class="solution-card">
+
+            <span class="problem-number">
+                02
+            </span>
+
+            <h3>
+                TaskFlow detects the problem
+            </h3>
+
+            <p>
+                See task health and identify tasks
+                that may need attention.
+            </p>
+
+        </div>
+
+
+        <div class="problem-arrow">
+            →
+        </div>
+
+
+        <div class="solution-card">
+
+            <span class="problem-number">
+                03
+            </span>
+
+            <h3>
+                Take the next action
+            </h3>
+
+            <p>
+                Continue, reschedule, break down,
+                wait or change the task status.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================== HOW IT WORKS ==================== -->
+
+    <section class="how-section">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                HOW IT WORKS
+            </span>
+
+            <h2>
+                From task creation to completion.
+            </h2>
+
+            <p>
+                TaskFlow keeps your work simple and
+                gives you a clear next step when
+                something goes wrong.
+            </p>
+
+        </div>
+
+
+        <div class="steps-grid">
+
+            <div class="step-card">
+
+                <span class="step-number">
+                    01
+                </span>
+
+                <h3>
+                    Create
+                </h3>
+
+                <p>
+                    Add your task with a title,
+                    description, priority and due date.
+                </p>
+
+            </div>
+
+
+            <div class="step-card">
+
+                <span class="step-number">
+                    02
+                </span>
+
+                <h3>
+                    Organize
+                </h3>
+
+                <p>
+                    Search, filter and sort your tasks
+                    to find what you need quickly.
+                </p>
+
+            </div>
+
+
+            <div class="step-card">
+
+                <span class="step-number">
+                    03
+                </span>
+
+                <h3>
+                    Understand
+                </h3>
+
+                <p>
+                    Check task status and health
+                    to understand your current progress.
+                </p>
+
+            </div>
+
+
+            <div class="step-card">
+
+                <span class="step-number">
+                    04
+                </span>
+
+                <h3>
+                    Recover
+                </h3>
+
+                <p>
+                    If a task becomes difficult or delayed,
+                    choose a practical recovery action.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================== FEATURES ==================== -->
+
+    <section
+        class="features-section"
+        id="features"
+    >
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                FEATURES
+            </span>
+
+            <h2>
+                Everything you need to stay organized.
+            </h2>
+
+        </div>
+
+
+        <div class="features-grid">
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    ✓
+                </div>
+
+                <h3>
+                    Task Management
+                </h3>
+
+                <p>
+                    Create, edit, complete and delete
+                    your tasks in one place.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    +
+                </div>
+
+                <h3>
+                    Task Breakdown
+                </h3>
+
+                <p>
+                    Divide a large task into smaller
+                    subtasks that are easier to complete.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    !
+                </div>
+
+                <h3>
+                    Task Health
+                </h3>
+
+                <p>
+                    Quickly understand whether a task
+                    is On Track, Needs Attention or At Risk.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    ↻
+                </div>
+
+                <h3>
+                    Smart Recovery
+                </h3>
+
+                <p>
+                    Reschedule, continue, wait or change
+                    the plan when a task cannot continue.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    ≡
+                </div>
+
+                <h3>
+                    Easy Organization
+                </h3>
+
+                <p>
+                    Search, filter and sort tasks based
+                    on your current needs.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    ◷
+                </div>
+
+                <h3>
+                    Deadline Awareness
+                </h3>
+
+                <p>
+                    Keep track of today's, upcoming
+                    and overdue tasks.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================== DIFFERENTIATOR ==================== -->
+
+    <section class="difference-section">
+
+        <div class="difference-content">
+
+            <span class="section-label">
+                THE TASKFLOW IDEA
+            </span>
+
+            <h2>
+                Don't just manage the task.
+                Understand the problem.
+            </h2>
+
+            <p>
+                A task can fail for many reasons.
+                It may be too difficult, too large,
+                unclear, blocked by someone else,
+                or simply have an unrealistic deadline.
+            </p>
+
+            <p>
+                TaskFlow helps you recognize the problem
+                and choose what to do next instead of
+                simply leaving the task unfinished.
+            </p>
+
+        </div>
+
+
+        <div class="difference-flow">
+
+            <div class="flow-item">
+
+                <strong>
+                    Create
+                </strong>
+
+                <span>
+                    →
+                </span>
+
+            </div>
+
+
+            <div class="flow-item">
+
+                <strong>
+                    Organize
+                </strong>
+
+                <span>
+                    →
+                </span>
+
+            </div>
+
+
+            <div class="flow-item">
+
+                <strong>
+                    Understand
+                </strong>
+
+                <span>
+                    →
+                </span>
+
+            </div>
+
+
+            <div class="flow-item">
+
+                <strong>
+                    Recover
+                </strong>
+
+                <span>
+                    →
+                </span>
+
+            </div>
+
+
+            <div class="flow-item">
+
+                <strong>
+                    Complete
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================== CTA ==================== -->
+
+    <section class="cta-section">
+
+        <span class="section-label">
+            GET STARTED
+        </span>
+
+        <h2>
+            Ready to get your tasks under control?
+        </h2>
+
+        <p>
+            Create your TaskFlow account and start
+            managing your work in a simpler way.
+        </p>
+
+        <button
+            id="ctaRegisterBtn"
+            class="hero-primary-btn"
+        >
+            Create Your Account
+        </button>
+
+    </section>
+
+</main>
+
+
+
+<!-- ==================== FOOTER ==================== -->
+
+<footer class="footer">
+
+    <div class="footer-logo">
+        TaskFlow
+    </div>
+
+    <p>
+        A simple task management system focused
+        on helping you stay on track.
+    </p>
+
+    <span>
+        © 2026 TaskFlow. All rights reserved.
+    </span>
+
+</footer>
+
+
+
+<!-- ==================== LOGIN MODAL ==================== -->
+
+<div id="loginModal" class="modal">
+
+    <div class="modal-content">
+
+        <button
+            class="close-btn"
+            id="closeLogin"
+        >
+            &times;
+        </button>
+
+        <h2>
+            Login
+        </h2>
+
+        <p>
+            Login to manage your tasks.
+        </p>
+
+        <form id="loginForm">
+
+            <div class="form-group">
+
+                <label for="loginEmail">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="loginPassword">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Enter your password"
+                    required
+                >
+
+            </div>
+
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+
+        <p class="switch-text">
+
+            Don't have an account?
+
+            <button
+                type="button"
+                id="switchToRegister"
+            >
+                Register
+            </button>
+
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================== REGISTER MODAL ==================== -->
+
+<div id="registerModal" class="modal">
+
+    <div class="modal-content">
+
+        <button
+            class="close-btn"
+            id="closeRegister"
+        >
+            &times;
+        </button>
+
+        <h2>
+            Create Account
+        </h2>
+
+        <p>
+            Create an account to start managing tasks.
+        </p>
+
+
+        <form id="registerForm">
+
+            <div class="form-group">
+
+                <label for="registerName">
+                    Name
+                </label>
+
+                <input
+                    type="text"
+                    id="registerName"
+                    placeholder="Enter your name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="registerEmail">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="registerEmail"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="registerPassword">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="registerPassword"
+                    placeholder="Enter password"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="registerConfirmPassword">
+                    Confirm Password
+                </label>
+
+                <input
+                    type="password"
+                    id="registerConfirmPassword"
+                    placeholder="Confirm password"
+                    required
+                >
+
+            </div>
+
+
+            <button type="submit">
+                Register
+            </button>
+
+        </form>
+
+
+        <p class="switch-text">
+
+            Already have an account?
+
+            <button
+                type="button"
+                id="switchToLogin"
+            >
+                Login
+            </button>
+
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================== SCRIPTS ==================== -->
+
+<script src="js/api.js"></script>
+
+<script src="js/auth.js"></script>
+
+
+<script>
+
+    const ctaRegisterBtn =
+        document.getElementById("ctaRegisterBtn");
+
+    ctaRegisterBtn.addEventListener(
+        "click",
+        function () {
+
+            openRegister();
+
+        }
+    );
+
+</script>
+
+
+</body>
+
+</html>

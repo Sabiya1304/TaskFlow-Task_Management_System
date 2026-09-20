@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard - TaskFlow</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- ==================== NAVBAR ==================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            TaskFlow
+        </div>
+
+
+        <nav class="main-nav">
+
+            <a href="dashboard.html" class="active">
+                Dashboard
+            </a>
+
+            <a href="tasks.html">
+                My Tasks
+            </a>
+
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <button id="logoutBtn">
+                Logout
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ==================== MAIN ==================== -->
+
+    <main class="dashboard-container">
+
+        <!-- Welcome -->
+
+        <section class="welcome-section">
+
+            <h1>
+                Good Morning, <span id="userName">User</span> 👋
+            </h1>
+
+            <p>
+                Here is your task overview for today.
+            </p>
+
+        </section>
+
+
+        <!-- ==================== SUMMARY CARDS ==================== -->
+
+        <section class="summary-grid">
+
+            <div class="summary-card">
+
+                <span class="summary-title">
+                    Total Tasks
+                </span>
+
+                <strong id="totalTasks">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <span class="summary-title">
+                    Pending
+                </span>
+
+                <strong id="pendingTasks">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <span class="summary-title">
+                    Completed
+                </span>
+
+                <strong id="completedTasks">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <span class="summary-title">
+                    Overdue
+                </span>
+
+                <strong id="overdueTasks">
+                    0
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================== START HERE ==================== -->
+
+        <section class="dashboard-section">
+
+            <div class="section-header">
+
+                <h2>
+                    Start Here
+                </h2>
+
+            </div>
+
+
+            <div id="startHereContainer">
+
+                <p class="empty-message">
+                    No task to start right now.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================== TODAY'S TASKS ==================== -->
+
+        <section class="dashboard-section">
+
+            <div class="section-header">
+
+                <h2>
+                    Today's Tasks
+                </h2>
+
+                <a href="tasks.html">
+                    View All
+                </a>
+
+            </div>
+
+
+            <div id="todayTasksContainer">
+
+                <p class="empty-message">
+                    No tasks for today.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================== NEEDS ATTENTION ==================== -->
+
+
+    </main>
+
+
+    <script src="../js/api.js"></script>
+    <script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>
